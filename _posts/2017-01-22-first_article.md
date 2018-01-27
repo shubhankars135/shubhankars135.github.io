@@ -155,12 +155,13 @@ def cost_cal(B_0,B_1):
 ## Gradient Descent.
 
    In gradient descent, we initialize our **B** to some random value, and then keep updating it until we've found the optimum solution, in other words untill convergence.
-   Mathematically 
+   Mathematically,
+   
    
 ![_config.yml]({{ site.baseurl }}/images/Convergence.png)
    
 
-Where a is the learning rate.
+Where alpha is the learning rate.
 
 Now, two things,- how do we know that we've reached convergence. One easy way is to run the gradient descent algorithm multiple times and plot the value of cost function(corresponding to that B) against the no. of iterations. So if solve the partial differentiation term in the above equation. The algorithm now will be, something like. 
 
