@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+Hey, Currently I'm a data science intern at Techmatters Technologies in Mumbai. Besides that I like watching Stanley kubick and Andrei Tarkovsky's movies.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[shubhankarsuley@gmail.com](mailto:shubhankarsuley@gmail.com)
