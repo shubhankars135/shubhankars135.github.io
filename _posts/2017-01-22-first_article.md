@@ -134,12 +134,14 @@ equation as ...
 
 Let us define the cost function as:
 
+![_config.yml]({{ site.baseurl }}/images/cost_function.png)
 
 
-The minimization, or the local minimum of the above function will yield the optimum solution.The reason we divide it by 2, is because its mathematically easy to minimize the function.
+The minimization, or the local minimum of the above function will yield the optimum solution.The reason we divide it by 2, is because its mathematically easy to minimize the function. Our objective in gradient descent in context to the below image is to find point at the lowest height of plane.
+
+![_config.yml]({{ site.baseurl }}/images/slr_grad.png)
 
 #### We now define a function such that it takes B0, and B1 as parameters and returns the value of cost function. 
-
 
 ```python
 def cost_cal(B_0,B_1):
@@ -154,6 +156,8 @@ def cost_cal(B_0,B_1):
 
    In gradient descent, we initialize our **B** to some random value, and then keep updating it until we've found the optimum solution, in other words untill convergence.
    Mathematically 
+   
+![_config.yml]({{ site.baseurl }}/images/Convergence.png)
    
 
 Where a is the learning rate.
