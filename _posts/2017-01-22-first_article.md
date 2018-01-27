@@ -94,7 +94,7 @@ plt.show()
 ```
 
 
-![png](output_3_0.png)
+![_config.yml]({{ site.baseurl }}/images/scatter.png)
 
 
 We will be defining X in the following manner, just following rules of linear algera
@@ -219,8 +219,7 @@ plt.plot(list(range(num_iters)),cost_list0)
 plt.show()
 ```
 
-
-![png](output_17_0.png)
+![_config.yml]({{ site.baseurl }}/images/grad.png)
 
 
 As we can see from the above diagram, there isn't any significant desecnt taking place for the last 500 iterations.
