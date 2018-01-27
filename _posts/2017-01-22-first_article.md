@@ -37,6 +37,7 @@ data = pd.read_csv('/home/shubhankar/Documents/csv/ex1data1.txt',sep = ",",heade
 data.columns = ['x','y']
 x = data['x']
 Y = data['y']
+df.set_index('NAME', inplace=True)
 data.head()
 ```
 
