@@ -45,6 +45,13 @@ data.head()
 
 
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+</style>
+  
+  
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
