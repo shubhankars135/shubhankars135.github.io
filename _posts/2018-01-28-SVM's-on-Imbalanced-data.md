@@ -1,7 +1,7 @@
-
-#                      Application of SVM's on Imbalanced (Skewed) Data
-
-#### Author : Shubhankar Suley , Data Science and Machine Learning enthusiast
+---
+layout: post
+title:  Application of SVM's on Imbalanced (Skewed) Data
+---
 
 Dealing with unbalanced data in Machine learning has always been an area of confusion and applying complex algorithms on them make's the zone more difficult to dive in. The classification problem we will deal with is binary in nature and has less no. of variables as compared with a typical SVM case, but lets see if SVM works here. Lets get our hands dirty
 
