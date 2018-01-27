@@ -2,13 +2,13 @@
 layout: post
 title:  Implementing Linear Regression by Gradient descent(from the scratch)
 ---
-Implementing something from the scratch , as opposed to using a established libraries to arrive at the results, is what true ML is all about - Andrej Karpathy
+> Implementing something from the scratch , as opposed to using established libraries for achieving result, is what true ML is all about - Andrej Karpathy
 
 Keeping the above in mind, my first article in this series is about implementing something as simple as linear regression from the scratch i.e without using scikit learn (which is the most widely used library to do that). We will briefly see what linear regreesion is (although this isn't a proper introduction to linear regression, but more about how to write your own functions to do so). Lets get started.
 
 ## Brief overview of Linear Regression
 
-Firstly, for the better understanding of Gradient Descent,let us focus on Simple linear regression i.e. linear regression with only one predictor and one response involved. So to brief you roughly about linear regression. In linear regression we are trying to come up with a linear equation, which follows the varation of data in the closet possible manner. In more technical terms, we are finding the equation of a straight line, which has the least Sum of Squared Errors(SSE).This line is called the best fit line.
+Firstly, for the better understanding of Gradient Descent,let us focus on Simple linear regression i.e. linear regression with only one predictor and one response involved. In linear regression our objective is to come up with a linear equation, which follows the varation of data in the closet possible manner. In more technical terms, we are finding the equation of a straight line, which has the least Sum of Squared Errors(SSE).This line is called the best fit line.
 
 Lets say,our problem statement requires us to predict the sales of a product in various cities, given its population. So if x column represents the population of city in millons, and y represents the monthly sales in thousand USD, our aim is to come up with equation which looks something like
 
@@ -37,7 +37,6 @@ data = pd.read_csv('/home/shubhankar/Documents/csv/ex1data1.txt',sep = ",",heade
 data.columns = ['x','y']
 x = data['x']
 Y = data['y']
-df.set_index('NAME', inplace=True)
 data.head()
 ```
 
@@ -57,6 +56,7 @@ data.head()
         vertical-align: top;
     }
 </style>
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -165,17 +165,17 @@ def cost_cal(B_0,B_1):
 ```
 
 ## Gradient Descent.
-
+**Algorithm**
    In gradient descent, we initialize our **B** to some random value, and then keep updating it until we've found the optimum solution, in other words untill convergence.
-   Mathematically,
+   Mathematically,it can be stated as
    
+![_config.yml]({{ site.baseurl }}/images/general.png)   
+ 
+So for our problem , i.e for Simple Linear Regression, the above algorithm takes the following from
    
 ![_config.yml]({{ site.baseurl }}/images/Convergence.png)
    
-
-Where alpha is the learning rate.
-
-Now, two things,- how do we know that we've reached convergence. One easy way is to run the gradient descent algorithm multiple times and plot the value of cost function(corresponding to that B) against the no. of iterations. So if solve the partial differentiation term in the above equation. The algorithm now will be, something like. 
+Now, the catch here is - how do we know that we've reached convergence. One easy way is to run the gradient descent algorithm multiple times and plot the value of cost function(corresponding to that B) against the no. of iterations. So if solve the partial differentiation term in the above equation. The algorithm now will be, something like. 
 
 We will select the number os iterations and the no. of iterations randomly.Although I'm choosing them randomly there are some ways to concretly intiallize these parameters , but lets not dive into it.
 
