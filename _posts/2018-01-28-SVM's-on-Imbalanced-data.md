@@ -207,8 +207,7 @@ plt.show()
 print (class_1_len/len(data),class_0_len/len(data))
 ```
 
-
-![png](output_6_0.png)
+![_config.yml]({{ site.baseurl }}/images/output_6_0.png)
 
 
     0.001727485630620034 0.9982725143693799
