@@ -12,7 +12,7 @@ Firstly, for the better understanding of Gradient Descent,let us focus on Simple
 
 Lets say,our problem statement requires us to predict the sales of a product in various cities, given its population. So if x column represents the population of city in millons, and y represents the monthly sales in thousand USD, our aim is to come up with equation which looks something like
 
-> Y = $\theta$0 + $\theta$1.X       .... (I)
+> Y = B0 + B1.X       .... (I)
 
 Where
 
@@ -20,7 +20,7 @@ Where
 
 > X = (X1,X2, ..... Xn)
 
-Now our problem boils down to finding $\theta$0, $\theta$1
+Now our problem boils down to finding B0, B1
 
 NOTE : This article is about gradient descent and its implementation and not about Linear regression. If the reader is unfamiliar to it, I strongly recommend going through this [article](https://www.analyticsvidhya.com/blog/2017/06/a-comprehensive-guide-for-linear-ridge-and-lasso-regression/)
 
@@ -122,9 +122,9 @@ print (X.shape, Y.shape)
     (97, 2) (97, 1)
 
 
-Now X is 97 x 2 matrix, and Y is 97 x 1 matrix, lets define $\theta$ = ($\theta$0,$\theta$1) (a 2 x 1 matrix) so that we could rewrite our (I)
+Now **X**is 97 x 2 matrix, and **Y** is 97 x 1 matrix, lets define **B** = (B0,B1) (a 2 x 1 matrix) so that we could rewrite our (I)
 equation as ...
-> Y = X . $\theta$
+> **Y = X . B**
 
 ## Cost function and its optimization.
 
@@ -138,7 +138,7 @@ Let us define the cost function as:
 
 The minimization, or the local minimum of the above function will yield the optimum solution.The reason we divide it by 2, is because its mathematically easy to minimize the function.
 
-#### We now define a function such that it takes $\theta$0, and $\theta$1 as parameters and returns the value of cost function. 
+#### We now define a function such that it takes B0, and B1 as parameters and returns the value of cost function. 
 
 
 ```python
@@ -152,17 +152,17 @@ def cost_cal(B_0,B_1):
 
 ## Gradient Descent.
 
-   In gradient descent, we initialize our $\theta$ to some random value, and then keep updating it until we've found the optimum solution, in other words untill convergence.
+   In gradient descent, we initialize our **B** to some random value, and then keep updating it until we've found the optimum solution, in other words untill convergence.
    Mathematically 
    
 
-Where $\alpha$ is the learning rate.
+Where a is the learning rate.
 
-Now, two things,- how do we know that we've reached convergence. One easy way is to run the gradient descent algorithm multiple times and plot the value of cost function(corresponding to that $\theta$) against the no. of iterations. So if solve the partial differentiation term in the above equation. The algorithm now will be, something like. 
+Now, two things,- how do we know that we've reached convergence. One easy way is to run the gradient descent algorithm multiple times and plot the value of cost function(corresponding to that B) against the no. of iterations. So if solve the partial differentiation term in the above equation. The algorithm now will be, something like. 
 
 We will select the number os iterations and the no. of iterations randomly.Although I'm choosing them randomly there are some ways to concretly intiallize these parameters , but lets not dive into it.
 
-#### The following function takes $\theta$0, $\theta$1 and learning rate $\alpha$ as parameters, performs a single step of gradient descent and returns the updated values of $\theta$0 and $\theta$1
+#### The following function takes B0, B1 and learning rate  as parameters, performs a single step of gradient descent and returns the updated values of B0 and B1
 
 
 ```python
@@ -174,9 +174,9 @@ def gradient_descent(b_0,b_1,a):
     return (b_0,b_1)
 ```
 
-Lets write a function which performs the gradient descent multiple times and returns a list of values of cost function, we will also print the values of updated $\theta$0, $\theta$1 we will also print the values of $\theta$0 and $\theta$1 to find the optimal solution.
+Lets write a function which performs the gradient descent multiple times and returns a list of values of cost function, we will also print the values of updated B0, B1 we will also print the values of B0 and B1 to find the optimal solution.
 
->##### The optimal solution, i.e the optimal value of $\theta$ will be that, for which the cost function has the minimum value.(local minimum)
+>##### The optimal solution, i.e the optimal value of B will be that, for which the cost function has the minimum value.(local minimum)
 
 
 ```python
@@ -226,7 +226,7 @@ plt.show()
 As we can see from the above diagram, there isn't any significant desecnt taking place for the last 500 iterations.
 So we can conclude that convergence has taken place.And as we can see from the printed results that 
 
-> #### $\theta$0 = -3.8152 & $\theta$1 = 1.1847 correspond to minimum value of cost function, so its our optimum solution.
+> #### B0 = -3.8152 & B1 = 1.1847 correspond to minimum value of cost function, so its our optimum solution.
 
 I encourage the reader to try a different set of input parameters and see the results.
 
