@@ -142,7 +142,7 @@ equation as ...
 
   In general, most of the parametric ML algorithms have two major steps - there is cost function(or loss function) , and then its optimization (maximization or minimization) for it, which yields the optimal solution.
   
-  In reality we can never find the above true $\theta$, but we can make a hypothesis,infact many hypotheses, and then choose the one which gives least error. That will be the optimum value for $\theta$
+  In reality we can never find the above true **B**, but we can make a hypothesis,infact many hypotheses, and then choose the one which gives least error. That will be the optimum value for **B**.
 
 Let us define the cost function as:
 
