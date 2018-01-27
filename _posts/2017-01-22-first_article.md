@@ -226,9 +226,14 @@ def multi_grad_descent(b0,b1,a):
 
 ```python
 cost_list0 = multi_grad_descent(1,1,0.01)
-## Note : I'm not priniting the values here because the limitation of printing 2500 values
+## Note : I'm not priniting all the values here because of the limitation of printing 2500 values
 ```
 
+![_config.yml]({{ site.baseurl }}/images/2500values.png)
+
+As we can see from the printed results that 
+
+> #### B0 = -3.8152 & B1 = 1.1847 correspond to minimum value of cost function, so its our optimum solution.
 
 ```python
 import matplotlib.pyplot as plt
@@ -241,9 +246,7 @@ plt.show()
 
 
 As we can see from the above diagram, there isn't any significant desecnt taking place for the last 500 iterations.
-So we can conclude that convergence has taken place.And as we can see from the printed results that 
-
-> #### B0 = -3.8152 & B1 = 1.1847 correspond to minimum value of cost function, so its our optimum solution.
+So we can conclude that convergence has taken place.
 
 I encourage the reader to try a different set of input parameters and see the results.
 
