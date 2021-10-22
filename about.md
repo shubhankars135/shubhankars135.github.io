@@ -4,7 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Hey, Currently I'm a data science intern at Techmatters Technologies in Mumbai. Besides that I like watching Stanley kubick and Andrei Tarkovsky's movies.
+Hi,
+I am a Software Developer with 3 years of work experience. I am proficient in Python, PostgreSQL, Django and Django REST, Docker, CICD etc. I have worked on Analytics Products, BI dashboards and E commerce websites. I am interested in building scalable and error resilient products with understanding of computers science and backend engineering.
+Thanks
 
 ### Contact me
 
